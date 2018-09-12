@@ -1,0 +1,11 @@
+.card-body{
+    margin: auto;
+}
+#new-post{
+    width: 100%;
+    
+    background-color: transparent;
+}
+h1 {
+    color:white;
+}

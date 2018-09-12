@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center center; 
+  position: relative;
+  top:0;
+  bottom: 0;
+  height: 100vh;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.column-form{
+  background-color: rgba(34, 34, 34, 0.795);
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  min-height: 100%;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
