@@ -3,7 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
+import store from './store/Index';
+
+//i want to render twice cause im going to show a component or other by a conditional
+const render = () => {
+    fancyLog();
+    return ReactDOM.render(<App />, document.getElementById("root"));
+};
+function fancyLog() {
+    console.log("%c TUTORIAL 👉 👉👇", "background: purple; color: #FFF");
+}
+store.subscribe(render);
+registerServiceWorker();
+
+render();
+
+
+
+
 //-------------ejemplo 1-----------------
 
 // function reducer(state, action) {
@@ -65,5 +84,8 @@ import { createStore, combineReducers } from 'redux';
 // }
 // store.dispatch(updateUserAction);
 // console.log("update user: ", store.getState());
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+
+
+// ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+// registerServiceWorker();

@@ -10,24 +10,29 @@ import shortid from 'shortid';
 @param {Number} numberOfProducts;
 */
 console.log("store");
+export const products = generateProducts(19);
+export const prods = _.mapKeys(products, "product_id");
+
 export function generateProduct() {
     return {
         product_id: shortid.generate(),
         name: faker.commerce.productName(),
         description: faker.lorem.sentence(),
         product_img: faker.image.image(),
+        price: faker.commerce.price()
     }
 }
 function generateProducts(numberOfProducts) {
     return Array.from({ length: numberOfProducts }, (v, i) => generateProduct(i));
 }
-const products = generateProducts(19);
 const store = createStore(reducer,
     {
-        Product: 
+        Product:
             products
         ,
         User: 'Michael el majo'
+        ,
+        openDetail: null
     },
 
     //to see on redux devtools

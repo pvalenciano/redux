@@ -1,11 +1,20 @@
+import { UPDATE_USER } from '../constants/action-types';
+
 export default function user(state = '', { type, payload }) {
-    //(state = '', action)
+    // switch (type) {
+    //     case 'updateUser':
+    //         return payload
+
+    //     default:
+    //         break;
+    // }
     switch (type) {
-        case 'updateUser':
+        case UPDATE_USER:
+
             return payload
 
         default:
-            break;
+            return state;
     }
-    return state;
+
 }
