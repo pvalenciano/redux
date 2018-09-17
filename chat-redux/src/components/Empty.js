@@ -10,7 +10,7 @@ const Empty = ({ user }) => {
             <h1 className="Empty__name">Welcome, {first_name}</h1>
             <img src={profile_pic} alt={name} className="Empty__img"></img>
             <p className="Empty__status">
-                <b>Status:</b>{status}
+                <b>Status: </b>{status}
             </p>
             <button className="Empty__btn">Start a conversation</button>
             <p className="Empty__info">Search for someone to start with or go to Contacts to see who is available</p>
