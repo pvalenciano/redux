@@ -1,4 +1,4 @@
-import { UPDATE_USER, EDIT_PRODUCT, DELETE_PRODUCT, UPDATE_OPENDETAIL } from '../constants/action-types';
+import { EXIT_DETAIL, UPDATE_USER, EDIT_PRODUCT, DELETE_PRODUCT, UPDATE_OPENDETAIL } from '../constants/action-types';
 
 export const updateUserAction = (user) => ({
     // type: 'updateUser',
@@ -15,6 +15,14 @@ export const updateOpenDetail = (product_id) => ({
     type: UPDATE_OPENDETAIL,
     payload:{
         product_id
+    }
+
+});
+
+export const exitFromOpenDetail = (openDetail) => ({
+    type: EXIT_DETAIL,
+    payload:{
+        openDetail:null
     }
 
 });

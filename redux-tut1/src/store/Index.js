@@ -11,7 +11,7 @@ import shortid from 'shortid';
 */
 console.log("store");
 export const products = generateProducts(19);
-export const prods = _.mapKeys(products, "product_id");
+// export const prods = _.mapKeys(products, "product_id");
 
 export function generateProduct() {
     return {
