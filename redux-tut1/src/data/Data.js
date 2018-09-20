@@ -7,12 +7,19 @@ import faker from 'faker';
 import txtgen from 'txtgen';
 import shortid from 'shortid';
 /**
-@param {Number} numberOfProducts;
+@param {Number} numberOfProducts
+@param {Function} generateUser 
+@returns {Array}
 */
 console.log("store");
 export const products = generateProducts(19);
 // export const prods = _.mapKeys(products, "product_id");
-
+export const state = {
+    user: generateUser(),
+    product: generateProduct(19),
+    openDetail: null,
+    openCart:null
+  };
 export function generateProduct() {
     return {
         product_id: shortid.generate(),
@@ -27,21 +34,10 @@ export function generateUser() {
         user_id: shortid.generate(),
         name: faker.internet.userName(),
         user_img: faker.internet.avatar(),
-        email: faker.internet.email()
+        email: faker.internet.email(),
+
     }
 }
-
 function generateProducts(numberOfProducts) {
     return Array.from({ length: numberOfProducts }, (v, i) => generateProduct(i));
 }
-const store = createStore(reducer,
-    // {
-    //     Product:products,
-    //     User,
-    //     openDetail: null
-    // },
-
-    //to see on redux devtools
-    window.devToolsExtension && window.devToolsExtension()
-);
-export default store;

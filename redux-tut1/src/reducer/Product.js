@@ -1,5 +1,6 @@
+import { products } from '../data/Data';
 import { DELETE_PRODUCT, EDIT_PRODUCT } from '../constants/action-types';
-export default function product(state = [], { type, payload }) {
+export default function product(state = products, { type, payload }) {
     // return state;
     switch (type) {
 
