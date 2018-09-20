@@ -1,0 +1,20 @@
+.container{
+}
+.user_info {
+    text-align: center;
+
+}
+.user_img{
+    border-radius: 50%;
+    
+}
+
+.shop_cart{
+    font-size: 30px;
+    text-align: right;
+    margin-top: 20px;
+    color: rgba(45, 238, 252, 0.664);
+}
+.fa-shopping-cart{
+   
+}

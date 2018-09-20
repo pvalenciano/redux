@@ -5,6 +5,11 @@ import Main from '../containers/Main';
 import Sidebar from '../containers/Sidebar';
 import store from '../store/Index';
 import _ from 'lodash';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+library.add(faStroopwafel)
+
 
 class App extends Component {
 
@@ -12,10 +17,10 @@ class App extends Component {
     console.log("getState: ",store.getState());
 
     console.log("app");
-    const { User, Product, openDetail } = store.getState();
+    const { User, Product, openDetail, openCart } = store.getState();
     return (
       <div className="App">
-        <Sidebar user={User} />
+        <Sidebar shoppingCartOpen={openCart} user={User} />
         <Main detailOpen={openDetail} productMain={Product} />
       </div>
     );
